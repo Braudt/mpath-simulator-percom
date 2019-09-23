@@ -1,6 +1,11 @@
 This code performs the simulations for the experiments relative to the paper Multipath Computation Offloading for Mobile Augmented Reality: Latency, Scheduling and Optimizations.
 
-It requires python 3, numpy and matplotlib to run.
+To run the code:
+
+    $ virtualenv --python=python3 venv
+    $ source venv/bin/activate
+    $ pip install numpy matplotlib
+    $ python main_*.py
 
 Configuration files are stored in the configs/ directory. Files named main_*.py run the experiments. Figures are stored in figs/. To regenerate the figures:
 
