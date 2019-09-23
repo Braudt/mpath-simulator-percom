@@ -1,0 +1,14 @@
+This code performs the simulations for the experiments relative to the paper Multipath Computation Offloading for Mobile Augmented Reality: Latency, Scheduling and Optimizations.
+
+It requires python 3, numpy and matplotlib to run.
+
+Configuration files are stored in the configs/ directory. Files named main_*.py run the experiments. Figures are stored in figs/. To regenerate the figures:
+
+* Figure 9: main_all.py
+* Figure 10a and 10c: main_wifi_delay.py
+* Figure 10b and 10d: main_wifi_bandwidth.py
+* Figure 11: main_random.py
+* Figure 12a and 12c: main_random_wifi_delay.py
+* Figure 12b and 12d: main_random_wifi_latency.py
+* Figure 13: main_5g.py
+
