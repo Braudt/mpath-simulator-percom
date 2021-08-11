@@ -3,6 +3,7 @@ from sim.simulator import Simulator
 from sim.statistics import Statistics
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 #from sim.link import Link
 
 
@@ -50,7 +51,8 @@ def plot_load(statsdict):
     axes.set_xlabel('Nr of tasks (x1000)')
     axes.set_yticks(ind)
     axes.set_yticklabels(['5G','5G 60FPS'])
-    cloud.savefig("figs/5g.pdf",format='pdf',bbox_inches = 'tight')
+    cloud.savefig(os.getcwd() + '/figs/5g.pdf',format = 'pdf',bbox_inches = 'tight')
+    print("saved")
 
 
 def main():

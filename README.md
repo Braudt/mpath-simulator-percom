@@ -33,7 +33,7 @@ All simulations are contained in a file named main_*.py as follows;
 Run the corresponding file as follows:
 
 ```
-    $ python main_*.py
+    $ python main.py
 ```
 
 The code will generate Figures in figs/
@@ -41,7 +41,7 @@ The code will generate Figures in figs/
 ## Code structure
 
 Configuration files are stored in the configs/ directory. Files named main_*.py
-run the experiments. Figures are stored in figs/. 
+run the experiments. Figures are stored in figs/. Outputs will be saved in .txt files of their corresponding .py files. 
 The code structure is as follows:
 
 ```
