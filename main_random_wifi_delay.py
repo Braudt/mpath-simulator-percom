@@ -3,6 +3,7 @@ from sim.simulator import Simulator
 from sim.statistics import Statistics
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 
@@ -65,7 +66,7 @@ def plot_deadlines(statsdict):
 
     cloud.legend((plt1[0],plt2[0]),("Tasks over deadline","Avg time over deadline"), bbox_to_anchor=(1.1,1.5), fontsize=14)
 
-    cloud.savefig("figs/random_wifi_delay_deadlines.pdf",format='pdf',bbox_inches = 'tight')
+    cloud.savefig(os.getcwd() + "/figs/random_wifi_delay_deadlines.pdf",format='pdf',bbox_inches = 'tight')
 
 def plot_load(statsdict):
     axis_font = {'size':'14'}
@@ -104,7 +105,7 @@ def plot_load(statsdict):
     axes.set_xticklabels(['0', '100', '200','300', '400', '500'], rotation=45,**axis_font)
 
 #cloud.tight_layout()
-    cloud.savefig("figs/random_wifi_delay_load.pdf",format='pdf',bbox_inches = 'tight')
+    cloud.savefig(os.getcwd() + "/figs/random_wifi_delay_load.pdf",format='pdf',bbox_inches = 'tight')
 
 
 def main():

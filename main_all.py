@@ -3,7 +3,7 @@ from sim.simulator import Simulator
 from sim.statistics import Statistics
 import numpy as np
 import matplotlib.pyplot as plt
-
+import os
 
 
 def simulate(config_module):
@@ -50,7 +50,7 @@ def plot_results(statsdict):
     axes.set_xticklabels(['D2D','E1','E2','E1+E2','C1','C1-3','All'], rotation=30,**axis_font)
     axes2.set_yscale('log')
 
-    cloud.savefig("figs/offloading.pdf",format='pdf',bbox_inches = 'tight')
+    cloud.savefig(os.getcwd() + "/figs/offloading.pdf",format='pdf',bbox_inches = 'tight')
 
 
 def main():
@@ -64,13 +64,19 @@ def main():
 
     simdict={}
     statsdict={}
+
     for module in module_list:
         importname="configs.config_all."+module
         sim,stats=simulate(importname)
         simdict[importname]=sim
         statsdict[importname]=stats
+
+
     plot_results(statsdict)
 
-
+import subprocess
+import sys
 if __name__== "__main__":
+    print("main_all")
     main()
+

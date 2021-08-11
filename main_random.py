@@ -3,6 +3,9 @@ from sim.simulator import Simulator
 from sim.statistics import Statistics
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+#plt.show(block=True)
+#plt.interactive(False)
 
 
 
@@ -49,7 +52,7 @@ def plot_load(statsdict):
     axes.set_xlabel('Nr of tasks (x1000)')
     axes.set_yticks(ind)
     axes.set_yticklabels(['Fixed','Random','Random\n70% WiFi'])
-    cloud.savefig("figs/random.pdf",format='pdf',bbox_inches = 'tight')
+    cloud.savefig(os.getcwd() + "/figs/random.pdf",format='pdf',bbox_inches = 'tight')
 
 
 def main():
